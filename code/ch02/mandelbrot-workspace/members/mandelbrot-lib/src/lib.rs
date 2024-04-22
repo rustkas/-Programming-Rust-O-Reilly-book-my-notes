@@ -60,7 +60,7 @@ pub fn parse_complex(s: &str) -> Option<Complex<f64>> {
 /// 
 /// The `upper_left` and `lower_right` parameters are points on the complex
 /// plane designating the area our image covers.
-fn pixel_to_point(
+pub fn pixel_to_point(
     bounds: (usize, usize),
     pixel: (usize, usize),
     upper_left: Complex<f64>,

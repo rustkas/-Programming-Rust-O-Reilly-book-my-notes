@@ -1,4 +1,4 @@
-workspace = { members = [ "members/mandelbrot-band","members/mandelbrot-lib", "members/mandelbrot-sigle-threaded"] }
+workspace = { members = [ "members/mandelbrot-thread-scope", "members/mandelbrot-band","members/mandelbrot-lib", "members/mandelbrot-sigle-threaded", "members/mandelbrot-task-queue", "members/mandelbrot-lockfree", "members/malderbrot-rayon"] }
 [package]
 name = "mandelbrot-workspace"
 version = "0.1.0"

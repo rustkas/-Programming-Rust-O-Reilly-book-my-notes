@@ -4,7 +4,7 @@ use mandelbrot_lib::pixel_to_point;
 use mandelbrot_lib::render;
 use mandelbrot_lib::write_image;
 use std::env;
-
+use std::thread;
 fn main() {
     let args: Vec<String> = env::args().collect();
 
@@ -29,7 +29,7 @@ fn main() {
 
     {
         let bands: Vec<&mut [u8]> = pixels.chunks_mut(rows_per_band * bounds.0).collect();
-        crossbeam::scope(|spawner| {
+        thread::scope(|spawner| {
             for (i, band) in bands.into_iter().enumerate() {
                 let top = rows_per_band * i;
                 let height = band.len() / bounds.0;
@@ -38,11 +38,11 @@ fn main() {
                 let band_lower_right =
                     pixel_to_point(bounds, (bounds.0, top + height), upper_left, lower_right);
 
-                spawner.spawn(move |_| {
+                spawner.spawn(move || {
                     render(band, band_bounds, band_upper_left, band_lower_right);
                 });
             }
-        }).unwrap();
+        });
     }
 
     write_image(&args[1], &pixels, bounds).expect("error writing PNG file");
