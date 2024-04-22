@@ -1,0 +1,9 @@
+workspace = { members = [ "members/mandelbrot-band","members/mandelbrot-lib", "members/mandelbrot-sigle-threaded"] }
+[package]
+name = "mandelbrot-workspace"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
