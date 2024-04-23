@@ -1,0 +1,9 @@
+workspace = { members = ["members/cheapo-request-lib", "members/cheapo-request-main", "members/cheapo-request-with-shotdown-main"] }
+[package]
+name = "cheapo-request-workspace"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
