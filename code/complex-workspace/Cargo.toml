@@ -1,6 +1,6 @@
-workspace = { members = ["members/copy-lib", "members/copy-main"] }
+workspace = { members = ["members/complex-lib"] }
 [package]
-name = "copy-workspace"
+name = "complex-workspace"
 version = "0.1.0"
 edition = "2021"
 

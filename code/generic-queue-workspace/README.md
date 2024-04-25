@@ -1,0 +1,1 @@
+`cargo test --package generic-queue --lib -- tests --show-output`

@@ -1,6 +1,6 @@
-workspace = { members = ["members/copy-lib", "members/copy-main"] }
+workspace = { members = ["members/grep-lib", "members/grep-main"] }
 [package]
-name = "copy-workspace"
+name = "grep-workspace"
 version = "0.1.0"
 edition = "2021"
 

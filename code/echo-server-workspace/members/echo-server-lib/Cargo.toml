@@ -1,6 +1,5 @@
-workspace = { members = ["members/copy-lib", "members/copy-main"] }
 [package]
-name = "copy-workspace"
+name = "echo-server"
 version = "0.1.0"
 edition = "2021"
 

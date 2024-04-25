@@ -1,6 +1,6 @@
-workspace = { members = ["members/copy-lib", "members/copy-main"] }
+workspace = { members = ["members/generic-queue-lib"] }
 [package]
-name = "copy-workspace"
+name = "generic-queue-workspace"
 version = "0.1.0"
 edition = "2021"
 

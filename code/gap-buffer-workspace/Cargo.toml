@@ -1,6 +1,6 @@
-workspace = { members = ["members/copy-lib", "members/copy-main"] }
+workspace = { members = ["members/gap-lib"] }
 [package]
-name = "copy-workspace"
+name = "gap-buffer-workspace"
 version = "0.1.0"
 edition = "2021"
 
